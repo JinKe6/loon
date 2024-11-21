@@ -1,0 +1,11 @@
+#!name=Spotify
+#!desc=解锁会员
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+
+[Script]
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/bootstrap\/v1\/bootstrap script-path=https://github.com/JinKe6/quanx/raw/refs/heads/main/scripts/spotify.js, requires-body=true, timeout=60, tag=bilibili
+
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/user-customization-service\/v1\/customize script-path=https://github.com/JinKe6/quanx/raw/refs/heads/main/scripts/spotify.js, requires-body=true, timeout=60, tag=bilibili
+
+[MITM]
+hostname = *.spotify.com
